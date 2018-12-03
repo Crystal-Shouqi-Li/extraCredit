@@ -13,6 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+@font-face {
+    font-family: Beyond Infinity;
+    src: url('../fonts/BeyondInfinity.ttf');
+}
+
+@font-face {
+    font-family: Geo Sans Light;
+    src: url('../fonts/GeosansLight.ttf');
+}
+
 
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -20,6 +30,10 @@ html, body {
 a {
     text-decoration: underline;
     color: #039BE5;
+}
+
+p {
+    margin:0;
 }
 .mdl-menu a {
     text-decoration: none;
@@ -75,7 +89,8 @@ h3 {
 /* Header */
 
 .logo {
-    font-family: 'Amaranth', sans-serif;
+    font-family: 'Beyond Infinity';
+    font-size: 70px;
 }
 .logo .material-icons {
     top: 4px;
@@ -176,8 +191,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0288D1;
-    background: radial-gradient(circle, #039BE5, #01579b);
+    background-color: #273E47;
     z-index: 10000;
     display: flex;
     justify-content: center;
@@ -212,4 +226,61 @@ h3 {
 .map_styling {
   height: 500px;
   width: 500px;
+}
+
+.header-wrapper {
+    background-color: #90A955;
+}
+
+#email {
+    margin-left: 50px;
+    margin-right: 60px;
+}
+
+.login {
+    margin: 10px;
+    font-size: 21px;
+    font-family: Geo Sans Light;
+}
+
+.login:focus {
+    outline: none;
+}
+
+.account-signup-button {
+    display: flex;
+}
+
+.sign-up-link{
+    text-decoration: none;
+    font-family: Geo Sans Light;
+    padding: 0;
+    background-color: #FFFFFF;
+    border: none;
+    margin: 0;
+    justify-content: center;
+}
+
+.sign-up-link:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+.sign-in-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.sign-in-button {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.sign-in-button:focus {
+    outline: none;
+    cursor: pointer;
+}
+
+#home-wrapper {
+    width: 600px;
 }

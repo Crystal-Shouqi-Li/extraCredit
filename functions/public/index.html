@@ -17,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Demonstrates the use of Google Cloud Database with a Firebase DB">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTTPS Callable functions Web Quickstart</title>
+  <title>Donation Tracker</title>
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -50,38 +50,45 @@
 
   <!-- Splash screen -->
   <section id="page-splash">
-    <h3 class="logo">Donation Tracker: Team John</h3>
+    <h3 class="logo">Donation Tracker Team John</h3>
     <div>
       <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with Google</button>
       <main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid" id = 'home-wrapper'>
 
       <!-- Container for the demo -->
       <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
-          <h2 class="mdl-card__title-text">Firebase Email &amp; Password Authentication</h2>
+        <div class="mdl-card__title mdl-color-text--white header-wrapper">
+          <h2 class="mdl-card__title-text">Log In</h2>
         </div>
         <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <p>Enter an email and password below and either sign in to an existing account or sign up</p>
-
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          &nbsp;&nbsp;&nbsp;
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
+          <input class="mdl-textfield__input login" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+          <input class="mdl-textfield__input login" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Password"/>
           <br/><br/>
-          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+          <div class="sign-in-button-wrapper">
+            <button disabled class="mdl-button mdl-js-button mdl-button--raised sign-in-button" id="quickstart-sign-in" name="signin">Sign In</button>
+          </div>
+          <br/>
+          <div class="account-signup-button sign-up-link">
+            <p> Don't have an account?&nbsp; </p>
+            <button class = 'sign-up-link' id="quickstart-sign-up" name="signup">Sign Up</button>
+          </div>
+          <br/>
+          <div class="sign-in-button-wrapper">
+            <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
+          </div>
+          <br/>
+          <div class="sign-in-button-wrapper">
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Send Password Reset Email</button>
+          </div>
 
-          <!-- Container where we'll display the user details -->
+          <!-- Container where we'll display the user details 
           <div class="quickstart-user-details-container">
             Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
             <div>Firebase auth <code>currentUser</code> object value:</div>
             <pre><code id="quickstart-account-details">null</code></pre>
           </div>
+          -->
         </div>
       </div>
 
